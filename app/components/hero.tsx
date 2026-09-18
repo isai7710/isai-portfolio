@@ -45,7 +45,7 @@ export default function Hero() {
           >
             <span className="text-palette-4">Mechanical Engineer</span> and
             freelance <span className="text-palette-4">Software Developer</span>{" "}
-            trained in CAD, robotics, and simple web development. I love
+            trained in CAD, embedded firmware, and web development. I love
             transforming innovative designs to life.
           </motion.p>
 
