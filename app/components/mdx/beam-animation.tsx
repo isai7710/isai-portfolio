@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import "katex/dist/katex.min.css";
-var Latex = require("react-latex");
 import { Dispatch, SetStateAction } from "react";
+import { BlockMath } from "react-katex";
+import "katex/dist/katex.min.css";
 
 interface BeamControlsProps {
   force: number;
@@ -22,7 +22,7 @@ interface BeamRendererProps {
 }
 
 function DeflectionFormula() {
-  const deflection_formula = `$y = \\frac{F}{EI}(\\frac{Lx^2}{2} - \\frac{x^3}{6})$`;
+  const deflection_formula = `y = \\frac{F}{EI}\\left(\\frac{Lx^2}{2} - \\frac{x^3}{6}\\right)`;
 
   return (
     <div className="flex flex-col px-8 items-center gap-2 bg-primary shadow-lg rounded-lg py-4 border border-palette-2/10 h-full">
@@ -30,7 +30,7 @@ function DeflectionFormula() {
       {/* Equation display */}
       <div className="bg-palette-1/30 p-3 rounded border border-palette-3/20 inline-block">
         <div className="text-lg text-palette-2 font-mono">
-          <Latex>{deflection_formula}</Latex>
+          <BlockMath math={deflection_formula} />
         </div>
       </div>
     </div>
