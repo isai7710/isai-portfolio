@@ -65,3 +65,70 @@
 html {
   scroll-behavior: smooth;
 }
+
+/*
+  Tailwind v4 compiles @tailwindcss/typography (loaded via @config,
+  since its classic-plugin API doesn't support CSS-first @theme)
+  into @layer utilities, with the DEFAULT prose color scheme declared
+  after this "offwhite" one in the generated output. Since .prose and
+  .prose-offwhite have equal specificity, the later-declared DEFAULT
+  rule silently won the cascade - this is why post body text was
+  rendering gray and headings/bold were rendering near-black instead
+  of the intended palette.
+
+  This block is intentionally NOT wrapped in @layer: unlayered CSS
+  always wins over layered CSS regardless of specificity or source
+  order, which is what makes this override reliable rather than
+  fragile to the plugin's output ordering. Do not move it into a
+  @layer block, or this bug will come back.
+*/
+.prose.prose-offwhite {
+  --tw-prose-body: #f5e5e6;
+  --tw-prose-headings: #e8dfca;
+  --tw-prose-links: #f28d35;
+  --tw-prose-bold: #e8dfca;
+  --tw-prose-quotes: #e8dfca;
+  --tw-prose-quote-borders: #4f6f52;
+  --tw-prose-hr: #4f6f52;
+  --tw-prose-th-borders: #4f6f52;
+  --tw-prose-td-borders: #4f6f52;
+}
+
+.prose.prose-offwhite
+  :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  color: #f28d35;
+  background-color: #1a4d2e;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-weight: 400;
+}
+
+.prose.prose-offwhite
+  :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  padding: 0;
+  background-color: transparent;
+  margin: 0;
+  border: 1px solid #4f6f52;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.prose.prose-offwhite
+  :where(pre code.hljs):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  ) {
+  display: block;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.7142857;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+}
