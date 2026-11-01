@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, ReactNode } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/app/lib/utils";
 
 interface DropdownProps {
