@@ -8,7 +8,7 @@ import {
 import EmailToast from "@/app/components/ui/email-toast";
 import { useState } from "react";
 import { cn } from "../lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 
 export default function About() {

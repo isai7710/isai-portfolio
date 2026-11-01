@@ -6,7 +6,7 @@ import clsx from "clsx";
 import { TentTreeIcon, Menu, X, AtSign } from "lucide-react";
 import { useState } from "react";
 import DropdownMenu from "@/app/components/navigation/dropdown-menu";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import Socials from "@/app/components/navigation/socials";
 
 const links = [

@@ -33,8 +33,8 @@ const InvertedPendulumSimulation: React.FC<InvertedPendulumSimulationProps> = ({
   const b: number = 0.05; // Damping coefficient (Ns)
 
   // Animation frame reference
-  const requestRef = useRef<number>();
-  const previousTimeRef = useRef<number>();
+  const requestRef = useRef<number | undefined>(undefined);
+  const previousTimeRef = useRef<number | undefined>(undefined);
   // State of the system [theta, z, thetaDot, zDot]
   const stateRef = useRef<SystemState>([theta, 0, 0, 0]);
   // Force input

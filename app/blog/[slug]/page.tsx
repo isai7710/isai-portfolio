@@ -14,9 +14,10 @@ export async function generateStaticParams() {
 export default async function PostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = await getPostContentBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getPostContentBySlug(slug);
 
   return (
     <TracingBeam className="px-6">

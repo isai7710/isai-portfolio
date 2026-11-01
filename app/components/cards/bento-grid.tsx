@@ -22,7 +22,7 @@ import Python from "../media/icons/python";
 import Numpy from "../media/icons/numpy";
 import Raspbi from "../media/icons/raspbi";
 import SolidWorks from "../media/icons/solidworks";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "motion/react";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,7 +35,7 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: {
     opacity: 0,
     y: 30,

@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { Twitter, Github, Linkedin } from "lucide-react";
 import { cn } from "@/app/lib/utils";
+import Github from "@/app/components/media/icons/github";
+import Twitter from "@/app/components/media/icons/twitter";
+import Linkedin from "@/app/components/media/icons/linkedin";
 
 const socialLinks = [
   {

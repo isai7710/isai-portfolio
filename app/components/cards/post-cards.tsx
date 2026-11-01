@@ -8,7 +8,7 @@ import {
   BookOpen,
   Code2,
 } from "lucide-react";
-import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import { motion, AnimatePresence, LayoutGroup } from "motion/react";
 import {
   Card,
   CardContent,
