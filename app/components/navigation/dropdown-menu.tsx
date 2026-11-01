@@ -22,7 +22,7 @@ export default function DropdownMenu({ links, setIsOpen }: DropdownMenuProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10 }}
       transition={{ duration: 0.5 }}
-      className="absolute right-0 mt-4 w-48 bg-primary backdrop-blur-sm rounded-md shadow-lg py-1"
+      className="absolute right-0 mt-4 w-48 bg-primary backdrop-blur-xs rounded-md shadow-lg py-1"
     >
       {links.map((link) => (
         <Link
@@ -32,8 +32,8 @@ export default function DropdownMenu({ links, setIsOpen }: DropdownMenuProps) {
           className={clsx(
             "block font-medium px-4 py-2 text-palette-2",
             pathname === link.href
-              ? "text-palette-3 bg-palette-2 bg-opacity-10 underline underline-offset-2"
-              : "text-palette-2 hover:underline hover:bg-palette-2 hover:bg-opacity-10 hover:underline-offset-2 hover:shadow-inner",
+              ? "text-palette-3 bg-palette-2/10 underline underline-offset-2"
+              : "text-palette-2 hover:underline hover:bg-palette-2/10 hover:underline-offset-2 hover:shadow-inner",
           )}
         >
           {link.name}

@@ -21,12 +21,12 @@ function BlogCard({ post }: { post: PostMetadata }) {
       animate={{ opacity: 1 }}
       whileHover={{ x: 4 }}
       transition={{ type: "spring", stiffness: 300 }}
-      className="relative group rounded-lg bg-primary backdrop-blur-sm p-4"
+      className="relative group rounded-lg bg-primary backdrop-blur-xs p-4"
     >
       <div className="absolute -top-0.5 -left-0.5 w-8 h-8 rounded-ss-xl border-l-4 border-t-4 border-palette-4"></div>
       <div className="absolute -bottom-0.5 -right-0.5 w-8 h-8 rounded-ee-xl border-r-4 border-b-4 border-[#F28D35]"></div>
       <SplitCard className="flex flex-col sm:flex-row gap-4 text-palette-3">
-        <SplitCardThumbnail className="w-full sm:w-2/5 flex-shrink-0 border border-palette-1 rounded-md overflow-hidden">
+        <SplitCardThumbnail className="w-full sm:w-2/5 shrink-0 border border-palette-1 rounded-md overflow-hidden">
           <Thumbnail src={post.src} autoPlay={true} className="h-full" />
         </SplitCardThumbnail>
         <Link href={`/blog/${post.slug}`}>
@@ -35,7 +35,7 @@ function BlogCard({ post }: { post: PostMetadata }) {
               {post.technologies?.map((tag) => (
                 <Badge
                   key={tag}
-                  className="px-2 py-0 text-palette-2/50 text-[10px] bg-white/10 shadow-sm hover:bg-primary rounded-full"
+                  className="px-2 py-0 text-palette-2/50 text-[10px] bg-white/10 shadow-xs hover:bg-primary rounded-full"
                 >
                   {tag}
                 </Badge>
@@ -67,7 +67,7 @@ export default function BlogCards({ posts }: { posts: PostMetadata[] }) {
         <div className="inline-flex text-sm text-palette-3">
           <button
             className={cn(
-              "w-20 py-1 px-2 rounded-s-md border bg-palette-3/10 backdrop-blur-sm transition-colors duration-200",
+              "w-20 py-1 px-2 rounded-s-md border bg-palette-3/10 backdrop-blur-xs transition-colors duration-200",
               activeTab === "blog" ? "border-palette-4" : "border-palette-1",
             )}
             onClick={() => setActiveTab("blog")}
@@ -76,7 +76,7 @@ export default function BlogCards({ posts }: { posts: PostMetadata[] }) {
           </button>
           <button
             className={cn(
-              "w-24 py-1 px-2 rounded-e-md border bg-palette-3/10 backdrop-blur-sm transition-colors duration-200",
+              "w-24 py-1 px-2 rounded-e-md border bg-palette-3/10 backdrop-blur-xs transition-colors duration-200",
               activeTab === "project" ? "border-palette-4" : "border-palette-1",
             )}
             onClick={() => setActiveTab("project")}

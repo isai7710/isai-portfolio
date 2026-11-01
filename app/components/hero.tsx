@@ -63,7 +63,7 @@ export default function Hero() {
               <span className="text-xs sm:text-sm whitespace-nowrap">
                 View my work
               </span>
-              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-palette-4 flex-shrink-0" />
+              <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-palette-4 shrink-0" />
             </Link>
           </motion.div>
         </div>

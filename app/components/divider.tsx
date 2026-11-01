@@ -5,7 +5,7 @@ export default function Divider({ className }: { className?: string }) {
   return (
     <div className={`flex items-center justify-center w-full ${className}`}>
       <motion.span
-        className="w-2 h-2 bg-palette-1 rounded-sm mr-2" // Darker square, rounded corners
+        className="w-2 h-2 bg-palette-1 rounded-xs mr-2" // Darker square, rounded corners
         initial={{ opacity: 0, scale: 0.5 }} // Start invisible and smaller
         animate={{ opacity: 1, scale: 1 }} // Fade in and scale to full size
         transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }} // Delay to appear after line starts
@@ -21,7 +21,7 @@ export default function Divider({ className }: { className?: string }) {
       />
 
       <motion.span
-        className="w-2 h-2 bg-palette-1 rounded-sm ml-2" // Darker square, rounded corners
+        className="w-2 h-2 bg-palette-1 rounded-xs ml-2" // Darker square, rounded corners
         initial={{ opacity: 0, scale: 0.5 }} // Start invisible and smaller
         animate={{ opacity: 1, scale: 1 }} // Fade in and scale to full size
         transition={{ delay: 0.6, duration: 0.3, ease: "easeOut" }} // Delay to appear after line starts

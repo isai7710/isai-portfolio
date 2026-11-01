@@ -113,9 +113,9 @@ export default function BentoGrid() {
             <h3 className="text-lg font-semibold">Coding</h3>
           </div>
           <div className="flex gap-1 justify-start">
-            <Cpp className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
-            <Python className="inline-block w-9 h- text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
-            <Numpy className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
+            <Cpp className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
+            <Python className="inline-block w-9 h- text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
+            <Numpy className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
           </div>
         </motion.div>
 
@@ -129,16 +129,16 @@ export default function BentoGrid() {
             <h3 className="text-lg font-semibold">Web Dev</h3>
           </div>
           <div className="flex gap-1 justify-start">
-            <NextJS className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
-            <Typescript className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
-            <TailwindCSS className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
+            <NextJS className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
+            <Typescript className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
+            <TailwindCSS className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
           </div>
         </motion.div>
 
         {/* Contact Card */}
         <motion.div
           variants={cardVariants}
-          className="col-span-full sm:col-span-4 order-1 md:order-none p-4 bg-primary border border-palette-1 rounded-lg shadow-xl"
+          className="col-span-full sm:col-span-4 order-1 md:order-0 p-4 bg-primary border border-palette-1 rounded-lg shadow-xl"
         >
           <div className="flex items-center mb-2">
             <Mail className="h-5 w-5 mr-2 text-palette-4" />
@@ -146,7 +146,7 @@ export default function BentoGrid() {
           </div>
           <p className="text-sm text-balance">
             Shoot me an email!
-            <EmailToast className="inline-flex gap-1 text-sm text-palette-4 hover:underline focus:outline-none">
+            <EmailToast className="inline-flex gap-1 text-sm text-palette-4 hover:underline focus:outline-hidden">
               isaisanchezcc@gmail.com
             </EmailToast>
           </p>
@@ -162,8 +162,8 @@ export default function BentoGrid() {
             <h3 className="text-lg font-semibold">Hardware</h3>
           </div>
           <div className="flex space-x-1">
-            <Arduino className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-1 rounded-md" />
-            <Raspbi className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-1 rounded-md" />
+            <Arduino className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-1 rounded-md" />
+            <Raspbi className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-1 rounded-md" />
           </div>
         </motion.div>
 
@@ -177,7 +177,7 @@ export default function BentoGrid() {
             <h3 className="text-lg font-semibold">CAD</h3>
           </div>
           <div className="flex space-x-2">
-            <SolidWorks className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-sm p-2 rounded-md" />
+            <SolidWorks className="inline-block w-9 h-9 text-palette-3 bg-white/10 backdrop-blur-xs p-2 rounded-md" />
           </div>
         </motion.div>
       </motion.div>

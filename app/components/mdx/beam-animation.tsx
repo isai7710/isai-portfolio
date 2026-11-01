@@ -28,7 +28,7 @@ function DeflectionFormula() {
     <div className="flex flex-col px-8 items-center gap-2 bg-primary shadow-lg rounded-lg py-4 border border-palette-2/10 h-full">
       <div className="font-mono text-palette-2 text-lg">Deflection Formula</div>
       {/* Equation display */}
-      <div className="bg-palette-1/30 p-3 rounded border border-palette-3/20 inline-block">
+      <div className="bg-palette-1/30 p-3 rounded-sm border border-palette-3/20 inline-block">
         <div className="text-lg text-palette-2 font-mono">
           <BlockMath math={deflection_formula} />
         </div>

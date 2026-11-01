@@ -1,30 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
-.custom-gradient {
-  background-color: #1a4d2e; /* Your primary color */
-  background-image: radial-gradient(at 94% 33%, #2a5d3e 0, transparent 69%),
-    radial-gradient(at 5% 3%, #153d24 0, transparent 83%),
-    radial-gradient(at 23% 54%, #225a36 0, transparent 81%),
-    radial-gradient(at 60% 80%, #1f5434 0, transparent 75%);
+@config '../../tailwind.config.ts';
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-@layer utilities {
-  .custom-scrollbar::-webkit-scrollbar {
+/*
+  Tailwind CSS v4 removed the default `cursor: pointer` on buttons, so
+  we've added this back to match v3 behavior - none of this app's
+  buttons set an explicit cursor utility of their own.
+*/
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@utility custom-scrollbar {
+  &::-webkit-scrollbar {
     width: 6px;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track {
     @apply bg-palette-1;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     @apply bg-palette-2 rounded-full;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  &::-webkit-scrollbar-thumb:hover {
     @apply bg-palette-4;
+  }
+}
+
+@layer utilities {
+  .custom-gradient {
+    background-color: #1a4d2e; /* Your primary color */
+    background-image:
+      radial-gradient(at 94% 33%, #2a5d3e 0, transparent 69%),
+      radial-gradient(at 5% 3%, #153d24 0, transparent 83%),
+      radial-gradient(at 23% 54%, #225a36 0, transparent 81%),
+      radial-gradient(at 60% 80%, #1f5434 0, transparent 75%);
   }
 }
 

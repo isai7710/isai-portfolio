@@ -21,13 +21,13 @@ const Dropdown: React.FC<DropdownProps> = ({
     <>
       <div
         className={cn(
-          "w-60 my-4 rounded-md overflow-hidden shadow-sm border border-palette-4 transition-all duration-500",
+          "w-60 my-4 rounded-md overflow-hidden shadow-xs border border-palette-4 transition-all duration-500",
           isOpen ? `w-64` : ``,
         )}
       >
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full flex items-center justify-between px-4 py-2 bg-palette-1/10 backdrop-blur-sm hover:bg-palette-1/50 transition-colors text-left font-medium text-palette-3"
+          className="w-full flex items-center justify-between px-4 py-2 bg-palette-1/10 backdrop-blur-xs hover:bg-palette-1/50 transition-colors text-left font-medium text-palette-3"
         >
           <span className="flex items-center gap-2">
             <svg
