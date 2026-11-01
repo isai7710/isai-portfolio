@@ -83,7 +83,7 @@ function GalleryImageModal({ image, onClose }: ImageModalProps) {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
@@ -96,7 +96,7 @@ function GalleryImageModal({ image, onClose }: ImageModalProps) {
       >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-all z-10"
+          className="absolute top-2 right-2 text-white p-2 rounded-full bg-black/50 hover:bg-black/70 transition-all z-10"
           aria-label="Close modal"
         >
           <X size={20} />
@@ -111,7 +111,7 @@ function GalleryImageModal({ image, onClose }: ImageModalProps) {
           className="max-h-[90vh] w-auto h-auto"
         />
 
-        <div className="absolute top-2 left-2 bg-black bg-opacity-50 px-3 py-2 rounded">
+        <div className="absolute top-2 left-2 bg-black/50 px-3 py-2 rounded-sm">
           <p className="text-white text-sm font-medium">{image.alt}</p>
           {/* Add additional metadata here */}
           {image.filmStock && (

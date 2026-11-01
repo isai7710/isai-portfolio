@@ -6,7 +6,7 @@ import "katex/dist/katex.min.css";
 export default function WanderBehaviorDiagram() {
   return (
     <>
-      <div className="border border-palette-2 bg-palette-2/10 backdrop-blur-sm rounded-md w-full max-w-md mx-auto">
+      <div className="border border-palette-2 bg-palette-2/10 backdrop-blur-xs rounded-md w-full max-w-md mx-auto">
         <div className="relative w-full" style={{ paddingBottom: "55%" }}>
           {/* 4:3 aspect ratio */}
           <svg

@@ -163,18 +163,18 @@ const InvertedPendulumSimulation: React.FC<InvertedPendulumSimulationProps> = ({
   };
 
   return (
-    <div className="aspect-video relative bg-primary shadow-lg rounded p-4">
+    <div className="aspect-video relative bg-primary shadow-lg rounded-sm p-4">
       {!autoPlay ? (
         <>
           <div className="absolute top-0 left-0 flex gap-2 m-2">
             <button
-              className="bg-primary hover:bg-palette-1 transition-colors duration-300 text-palette-4 border border-palette-4 font-bold py-1 px-4 rounded mr-2"
+              className="bg-primary hover:bg-palette-1 transition-colors duration-300 text-palette-4 border border-palette-4 font-bold py-1 px-4 rounded-sm mr-2"
               onClick={() => setRunning(!running)}
             >
               {running ? <PauseIcon /> : <PlayIcon />}
             </button>
             <button
-              className="bg-palette-2/10 backdrop-blur-md hover:bg-palette-2/20 text-palette-2 font-bold py-1 px-4 rounded mr-2"
+              className="bg-palette-2/10 backdrop-blur-md hover:bg-palette-2/20 text-palette-2 font-bold py-1 px-4 rounded-sm mr-2"
               onClick={resetSimulation}
             >
               <RotateCcw />

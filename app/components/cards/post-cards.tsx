@@ -143,7 +143,7 @@ function PostCard({ post }: { post: PostMetadata }) {
       <Card className="group relative flex flex-col overflow-hidden rounded-xl border border-palette-1 bg-palette-2/5 backdrop-blur-md shadow-xl hover:shadow-xl transition-all duration-300 ease-in-out">
         {/* Subtle gradient overlay that appears on hover */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-palette-4/5 via-transparent to-palette-3/5 opacity-0 pointer-events-none rounded-2xl"
+          className="absolute inset-0 bg-linear-to-br from-palette-4/5 via-transparent to-palette-3/5 opacity-0 pointer-events-none rounded-2xl"
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
         />
@@ -152,7 +152,7 @@ function PostCard({ post }: { post: PostMetadata }) {
           <Thumbnail src={post.src} />
         </CardHeader>
 
-        <Link href={`/blog/${post.slug}`} className="flex-grow">
+        <Link href={`/blog/${post.slug}`} className="grow">
           <CardContent className="p-3">
             <div className="flex items-center justify-between mb-2">
               <CardTitle className="text-xl sm:text-2xl font-bold line-clamp-1">
@@ -182,13 +182,13 @@ function PostCard({ post }: { post: PostMetadata }) {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <Badge className="px-2 py-0.5 text-palette-2/50 text-[10px] bg-palette-1/10 backdrop-blur-sm border border-palette-1/20 hover:bg-palette-4/20 hover:border-palette-4/30 transition-all duration-300">
+                    <Badge className="px-2 py-0.5 text-palette-2/50 text-[10px] bg-palette-1/10 backdrop-blur-xs border border-palette-1/20 hover:bg-palette-4/20 hover:border-palette-4/30 transition-all duration-300">
                       {tag}
                     </Badge>
                   </motion.div>
                 ))}
                 {post.technologies.length > 4 && (
-                  <Badge className="px-3 py-1 text-palette-2/50 text-[10px] bg-palette-1/5 backdrop-blur-sm border border-palette-1/10">
+                  <Badge className="px-3 py-1 text-palette-2/50 text-[10px] bg-palette-1/5 backdrop-blur-xs border border-palette-1/10">
                     +{post.technologies.length - 4}
                   </Badge>
                 )}
@@ -213,7 +213,7 @@ function PostCard({ post }: { post: PostMetadata }) {
               <Link
                 href={post.src.link}
                 target="_blank"
-                className="flex items-center gap-2 px-4 py-2.5 border border-palette-4/30 text-palette-4 rounded-lg hover:bg-palette-4/10 transition-all duration-300 text-sm font-medium backdrop-blur-sm"
+                className="flex items-center gap-2 px-4 py-2.5 border border-palette-4/30 text-palette-4 rounded-lg hover:bg-palette-4/10 transition-all duration-300 text-sm font-medium backdrop-blur-xs"
               >
                 View Demo
                 <ArrowUpRight className="w-4 h-4" />

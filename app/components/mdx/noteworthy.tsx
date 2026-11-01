@@ -117,7 +117,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
 
   const getArrowClasses = () => {
     const arrowSize = "w-3 h-3";
-    const baseClasses = `absolute ${arrowSize} bg-palette-1/90 backdrop-blur-sm border border-palette-4 transform rotate-45`;
+    const baseClasses = `absolute ${arrowSize} bg-palette-1/90 backdrop-blur-xs border border-palette-4 transform rotate-45`;
 
     switch (actualPosition) {
       case "top":
@@ -163,7 +163,7 @@ const Noteworthy: React.FC<NoteworthyProps> = ({
           strokeLinecap="round"
           strokeLinejoin="round"
           className={cn(
-            "text-palette-4 transition-colors duration-200 flex-shrink-0",
+            "text-palette-4 transition-colors duration-200 shrink-0",
             isVisible ? "text-palette-3" : "group-hover:text-palette-3",
           )}
         >

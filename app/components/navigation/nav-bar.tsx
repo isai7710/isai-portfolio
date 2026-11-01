@@ -31,7 +31,7 @@ export default function NavBar() {
         className={clsx(
           pathname === "/gallery"
             ? "hidden"
-            : "w-72 md:w-full md:max-w-md mx-auto rounded-full sticky top-2 z-50 bg-primary bg-opacity-25 border-palette-1 border shadow-xl backdrop-blur-sm transition-all duration-200",
+            : "w-72 md:w-full md:max-w-md mx-auto rounded-full sticky top-2 z-50 bg-primary/25 border-palette-1 border shadow-xl backdrop-blur-xs transition-all duration-200",
         )}
       >
         <nav className="relative flex items-center h-16 px-4 text-palette-3 mx-auto">
@@ -43,7 +43,7 @@ export default function NavBar() {
                 pathname === "/" && "text-palette-4",
               )}
             >
-              <TentTreeIcon className="w-6 h-6 group-hover:rotate-[20deg] transition ease-in-out duration-300" />
+              <TentTreeIcon className="w-6 h-6 group-hover:rotate-20 transition ease-in-out duration-300" />
               Home
             </Link>
           </div>
@@ -56,8 +56,8 @@ export default function NavBar() {
                     className={clsx(
                       "text-md font-semibold px-3 py-2 rounded-md transition-all duration-200",
                       pathname === link.href
-                        ? "text-palette-4 bg-palette-2 bg-opacity-10 underline underline-offset-2"
-                        : "text-palette-3 hover:bg-palette-2 hover:bg-opacity-10 hover:shadow-xl",
+                        ? "text-palette-4 bg-palette-2/10 underline underline-offset-2"
+                        : "text-palette-3 hover:bg-palette-2/10 hover:shadow-xl",
                     )}
                   >
                     {link.name}
@@ -83,7 +83,7 @@ export default function NavBar() {
                     <Socials
                       className="flex ml-14 space-x-3"
                       iconSize={18}
-                      linkClass="p-1.5 border border-palette-1 rounded-full shadow-lg hover:text-palette-4 transition-colors bg-palette-1/10 backdrop-blur-sm duration-200"
+                      linkClass="p-1.5 border border-palette-1 rounded-full shadow-lg hover:text-palette-4 transition-colors bg-palette-1/10 backdrop-blur-xs duration-200"
                     />
                   </motion.div>
                 )}
